@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AWS S3 Image Uploader (Free Tier Project)
 
 This is a real-time serverless project using AWS Free Tier. It allows users to upload images via an HTML page. The images are sent to AWS Lambda using API Gateway and stored in an S3 bucket.
@@ -27,3 +28,6 @@ This is a real-time serverless project using AWS Free Tier. It allows users to u
 - Deploy and test with HTML frontend
 
 ## 📁 Folder Structure
+=======
+# aws-s3-image-uploader
+A serverless AWS project using Lambda, API Gateway, and S3 to upload images through a web interface. Fully built using AWS Free Tier.

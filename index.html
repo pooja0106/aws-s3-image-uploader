@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AWS S3 Image Uploader</title>
+</head>
+<body>
+  <h2>Upload Image to S3</h2>
+  <input type="file" id="fileInput" />
+  <button onclick="upload()">Upload</button>
+
+  <script>
+    async function upload() {
+      const file = document.getElementById("fileInput").files[0];
+      const reader = new FileReader();
+
+      reader.onload = async () => {
+        const base64data = reader.result.split(",")[1];
+
+        const response = await fetch("YOUR_API_GATEWAY_ENDPOINT", {
+          method: "POST",
+          body: base64data
+        });
+
+        const result = await response.text();
+        alert(result);
+      };
+
+      reader.readAsDataURL(file);
+    }
+  </script>
+</body>
+</html>
